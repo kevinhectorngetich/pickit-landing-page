@@ -1,9 +1,9 @@
 import Link from "next/link"
-import { ArrowLeft, Shield, Eye, Database, Lock } from "lucide-react"
+import { ArrowLeft, Shield, Database, Lock, Bell } from "lucide-react"
 
 export const metadata = {
-  title: "Privacy Policy — Pick It",
-  description: "Privacy Policy for Pick It mobile app",
+  title: "Privacy Policy — Pick It!",
+  description: "Privacy Policy for Pick It! mobile app",
 }
 
 export default function PrivacyPage() {
@@ -33,10 +33,10 @@ export default function PrivacyPage() {
           {/* Privacy Highlights */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-              { icon: Shield, label: "Privacy First" },
-              { icon: Eye, label: "No Tracking" },
+              { icon: Shield, label: "We Respect Privacy" },
               { icon: Database, label: "Local Storage" },
-              { icon: Lock, label: "Your Data, Yours" },
+              { icon: Lock, label: "Data Encrypted" },
+              { icon: Bell, label: "Transparent" },
             ].map(({ icon: Icon, label }) => (
               <div
                 key={label}
@@ -54,82 +54,110 @@ export default function PrivacyPage() {
             <section>
               <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Our Commitment</h2>
               <p>
-                At Pick It, we believe your decisions are your business. We built this app with privacy at its core,
-                which means we collect as little data as possible — and in most cases, none at all.
+                At Pick It!, we respect your privacy. This policy explains what data is collected when you use our app and how it is handled.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Information We Do NOT Collect</h2>
-              <p className="mb-3">
-                Let&apos;s start with what we <strong>don&apos;t</strong> do:
-              </p>
               <ul className="list-disc pl-6 space-y-1">
-                <li>We do NOT collect your decision options or results</li>
-                <li>We do NOT track your usage patterns or behavior</li>
-                <li>We do NOT sell any data to third parties</li>
-                <li>We do NOT use advertising SDKs that track you</li>
                 <li>We do NOT require account creation or login</li>
+                <li>We do NOT collect your name, email, phone number, or address</li>
+                <li>We do NOT collect your decision options, wheel items, or game results</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Information We May Collect</h2>
+              <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Information Collected Automatically</h2>
               <p className="mb-3">
-                In limited circumstances, we may collect:
+                Our app uses third-party SDKs that may automatically collect the following data:
               </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>Crash Reports:</strong> If the app crashes, anonymous crash data may be collected
-                  through Apple or Google&apos;s standard crash reporting to help us fix bugs.
-                </li>
-                <li>
-                  <strong>Purchase Information:</strong> If you make an in-app purchase, the transaction is
-                  handled entirely by Apple/Google. We only receive confirmation of the purchase, not your
-                  payment details.
-                </li>
-                <li>
-                  <strong>Support Communications:</strong> If you contact us for support, we&apos;ll have access
-                  to the information you choose to share in your message.
-                </li>
-              </ul>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-[#1A1A1A] mb-1">Device or Other IDs</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Advertising ID, device identifiers, and push notification tokens</li>
+                    <li><strong>Collected by:</strong> Google AdMob, OneSignal, Firebase Cloud Messaging</li>
+                    <li><strong>Purpose:</strong> Ad serving, push notifications, analytics</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#1A1A1A] mb-1">App Interactions</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Ad impressions, ad clicks, and in-app activity</li>
+                    <li><strong>Collected by:</strong> Google AdMob</li>
+                    <li><strong>Purpose:</strong> Advertising and analytics</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="mt-3">
+                This data is collected and shared with these third-party services for the purposes described above. Data collection is required to use the app.
+              </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Local Data Storage</h2>
               <p>
-                All your decision lists, wheel customizations, and preferences are stored locally on your device.
-                This data never leaves your phone unless you explicitly choose to share it. If you delete the app,
-                this data is permanently removed.
+                Your decision lists, wheel customizations, and preferences are stored locally on your device. This data never leaves your phone. If you delete the app, this data is removed.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Third-Party Services</h2>
-              <p>
-                The app uses the following third-party services:
+              <p className="mb-3">
+                The app uses the following third-party services, each with their own privacy policies:
               </p>
-              <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li><strong>Apple App Store / Google Play:</strong> For app distribution and in-app purchases</li>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>
+                  <strong>Google AdMob</strong> — Ad serving and measurement (
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#008080] hover:underline">Privacy Policy</a>)
+                </li>
+                <li>
+                  <strong>OneSignal</strong> — Push notifications (
+                  <a href="https://onesignal.com/privacy_policy" target="_blank" rel="noopener noreferrer" className="text-[#008080] hover:underline">Privacy Policy</a>)
+                </li>
+                <li>
+                  <strong>Firebase Cloud Messaging</strong> — Push notifications (
+                  <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" className="text-[#008080] hover:underline">Privacy Policy</a>)
+                </li>
+                <li>
+                  <strong>Apple App Store / Google Play</strong> — App distribution and in-app purchases
+                </li>
               </ul>
-              <p className="mt-2">
-                These services have their own privacy policies that govern their data practices.
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">In-App Purchases</h2>
+              <p>
+                If you make an in-app purchase (e.g., to remove ads), the transaction is handled by Apple/Google. We only receive confirmation of the purchase, not your payment details.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Data Encryption</h2>
+              <p>
+                All data transmitted from the app is encrypted in transit using industry-standard protocols (HTTPS/TLS).
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Data Deletion</h2>
+              <p>
+                Since we do not maintain user accounts or store personal data on our servers, there is no user data for us to delete. Locally stored data is removed when you uninstall the app.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Children&apos;s Privacy</h2>
               <p>
-                Pick It is safe for all ages. We do not knowingly collect any personal information from children
-                under 13. The app can be used without providing any personal data.
+                Our app is intended for users aged 13 and older. We do not knowingly collect personal information from children under 13.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl text-[#1A1A1A] mb-3">Changes to This Policy</h2>
               <p>
-                We may update this Privacy Policy from time to time. We will notify you of any changes by
-                posting the new policy on this page and updating the &quot;Last updated&quot; date.
+                We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.
               </p>
             </section>
 
